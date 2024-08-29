@@ -1,0 +1,11 @@
+---
+name: pipeline-example
+runtime:
+  name: nodejs
+  options:
+    packagemanager: npm
+description: A minimal AWS TypeScript Pulumi program
+config:
+  pulumi:tags:
+    value:
+      pulumi:template: aws-typescript
