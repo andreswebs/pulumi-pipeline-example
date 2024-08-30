@@ -1,7 +1,13 @@
 ---
 name: Pull Request
+
+permissions:
+  id-token: write
+  contents: read
+
 on:
   - pull_request
+
 jobs:
   preview:
     name: Preview
@@ -22,6 +28,7 @@ jobs:
         with:
           organization: andreswebs
           requested-token-type: urn:pulumi:token-type:access_token:personal
+          scope: user:andreswebs
 
       - uses: pulumi/actions@v5
         with:
